@@ -15,21 +15,63 @@
   </head>
   <body>
     <div class="parent">
+      <div class="playlist" style="margin-bottom: 62px;">
+        <h1 style="margin-left: 10px;">PlayList</h1>
+        <ul>
+          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
+          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
+          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
+          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
+          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
+          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
+          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
+          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
+          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
+        </ul>
+      </div>
       <div class="musicplayer">
-        <div class="music"><i class="fa-solid fa-music"></i> Music</div>
+        <div class="music" style="text-align: left;"><i class="fa-solid fa-music"></i><span > Music</span></div>
         <div class="nowplaying">
-          <i class="fa-solid fa-angle-down"></i> <span id="np">Now Playing</span>
+          <i class="fa-solid fa-angle-down"></i>
+          <span id="np">Now Playing</span>
           <i class="fa-solid fa-ellipsis"></i>
         </div>
-        <div class="image"></div>
-        <div class="musicProgress"></div>
-        <div class="volumeSlider"></div>
-        <div class="controls">
-            <button class="backward"><i class="fa-solid fa-backward"></i></button>
-            <button class="play"><i class="fa-solid fa-play"></i></button>
-            <button class="forward"><i class="fa-solid fa-forward"></i></button>
+        <div class="imagediv">
+          <img src="./assets/img.avif" class="image" alt="" srcset="" />
         </div>
+        <div class="musicProgress"></div>
+        <div class="volumeSlider"style="text-align: left;">
+          <i class="fa-solid fa-volume-high"></i>
+        <input type="range" min="0"  max="100" id="volumecontroller" value="10">
+        </div>
+        <div class="controller">
+       <span> <a href="#" class="previous round">&#8249;</a></span>
+        <div class="botón" onclick="this.classList.toggle('active'); playPause() "> 
+          <div class="fondo" x="0" y="0" width="200" height="200"></div>
+          <div class="icono" width="200" height="200" onclick="">
+            <div
+              class="parte izquierda"
+              x="0"
+              y="0"
+              width="200"
+              height="200"
+              fill="#fff"
+            ></div>
+            <div
+              class="parte derecha"
+              x="0"
+              y="0"
+              width="200"
+              height="200"
+              fill="#fff"
+             
+            ></div>
+          </div>
+          <div class="puntero"></div>     
+
+        </div><span><a href="#" class="next round">&#8250;</a></span></div>
       </div>
+
     </div>
     <script src="app.js"></script>
   </body>
