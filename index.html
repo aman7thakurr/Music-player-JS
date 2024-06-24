@@ -15,22 +15,49 @@
   </head>
   <body>
     <div class="parent">
-      <div class="playlist" style="margin-bottom: 62px;">
-        <h1 style="margin-left: 10px;">PlayList</h1>
+      <div class="playlist" style="margin-bottom: 62px">
+        <h1 style="margin-left: 10px">PlayList</h1>
         <ul>
-          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
-          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
-          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
-          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
-          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
-          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
-          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
-          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
-          <li onclick="playAud('./assets/powfu-death-bed.mp3')">powfu-death-bed</li>
+          <li onclick="playAud('./assets/Coldplay - Hymn For The Weekend.mp3')">
+            Coldplay - Hymn For The Weekend
+          </li>
+          <li onclick="playAud('./assets/Coldplay - A Sky Full Of Stars.mp3')">
+            Coldplay - A Sky Full Of Stars
+          </li>
+          <li onclick="playAud('./assets/Ma Belle.mp3')">
+            Ma Belle - AP Dhillon
+          </li>
+           <li onclick="playAud('./assets/Anuv Jain - HUSN.mp3')">
+            Anuv Jain - HUSN
+          </li>
+          <li onclick="playAud('./assets/SOFTLY.mp3')">
+            Softly (Karan Aujla)
+          </li>
+          <li onclick="playAud('./assets/Pehle Bhi Main.mp3')">
+            Pehle Bhi Main
+          </li>
+          
+          <li onclick="playAud('./assets/AUR - TU HAI KAHAN.mp3')">
+             TU HAI KAHAN
+          </li>
+          
+          
+          
+          
+         
+          
+          <li onclick="playAud('./assets/powfu-death-bed.mp3')">
+            powfu-death-bed
+          </li>
+          <li onclick="playAud('./assets/powfu-death-bed.mp3')">
+            powfu-death-bed
+          </li>
         </ul>
       </div>
       <div class="musicplayer">
-        <div class="music" style="text-align: left;"><i class="fa-solid fa-music"></i><span > Music</span></div>
+        <div class="music" style="text-align: left">
+          <i class="fa-solid fa-music"></i><span> Music</span>
+        </div>
         <div class="nowplaying">
           <i class="fa-solid fa-angle-down"></i>
           <span id="np">Now Playing</span>
@@ -39,39 +66,53 @@
         <div class="imagediv">
           <img src="./assets/img.avif" class="image" alt="" srcset="" />
         </div>
-        <div class="musicProgress"></div>
-        <div class="volumeSlider"style="text-align: left;">
+        <div class="musicProgress">
+          <span class="curr_time"></span><input type="range" style="
+          cursor: pointer;
+          width: 15rem; margin-bottom: 2px;"> <span class="total_duration"></span>
+        </div>
+        <div class="volumeSlider" style="text-align: left">
           <i class="fa-solid fa-volume-high"></i>
-        <input type="range" min="0"  max="100" id="volumecontroller" value="10">
+         <span class="volumevalue"></span>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            id="volumecontroller"
+            value="10"
+          />
         </div>
         <div class="controller">
-       <span> <a href="#" class="previous round">&#8249;</a></span>
-        <div class="botón" onclick="this.classList.toggle('active'); playPause() "> 
-          <div class="fondo" x="0" y="0" width="200" height="200"></div>
-          <div class="icono" width="200" height="200" onclick="">
-            <div
-              class="parte izquierda"
-              x="0"
-              y="0"
-              width="200"
-              height="200"
-              fill="#fff"
-            ></div>
-            <div
-              class="parte derecha"
-              x="0"
-              y="0"
-              width="200"
-              height="200"
-              fill="#fff"
-             
-            ></div>
+          <i class="fa-solid fa-repeat" style="margin-right: 100px;"></i>
+          <span> <a href="#" id="previoustrack" class="previous round">&#8249;</a></span>
+          <div
+            class="botón"
+            onclick="this.classList.toggle('active'); playPause() "
+          >
+            <div class="fondo" x="0" y="0" width="200" height="200"></div>
+            <div class="icono" width="200" height="200" onclick="">
+              <div
+                class="parte izquierda"
+                x="0"
+                y="0"
+                width="200"
+                height="200"
+                fill="#fff"
+              ></div>
+              <div
+                class="parte derecha"
+                x="0"
+                y="0"
+                width="200"
+                height="200"
+                fill="#fff"
+              ></div>
+            </div>
+            <div class="puntero"></div>
           </div>
-          <div class="puntero"></div>     
-
-        </div><span><a href="#" class="next round">&#8250;</a></span></div>
+          <span style="margin-right: 74px;"><a href="#" id="nexttrack" class="next round" >&#8250;</a></span>
+        </div>
       </div>
-
     </div>
     <script src="app.js"></script>
   </body>
