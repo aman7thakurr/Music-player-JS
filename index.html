@@ -49,9 +49,6 @@
           <li onclick="playAud('./assets/powfu-death-bed.mp3')">
             powfu-death-bed
           </li>
-          <li onclick="playAud('./assets/powfu-death-bed.mp3')">
-            powfu-death-bed
-          </li>
         </ul>
       </div>
       <div class="musicplayer">
@@ -84,7 +81,7 @@
         </div>
         <div class="controller">
           <i class="fa-solid fa-repeat" style="margin-right: 100px;"></i>
-          <span> <a href="#" id="previoustrack" class="previous round">&#8249;</a></span>
+          <span> <a href="#" id="previoustrack" onclick="prevTrack()" class="previous round">&#8249;</a></span>
           <div
             class="botón"
             onclick="this.classList.toggle('active'); playPause() "
@@ -110,7 +107,7 @@
             </div>
             <div class="puntero"></div>
           </div>
-          <span style="margin-right: 74px;"><a href="#" id="nexttrack" class="next round" >&#8250;</a></span>
+          <span style="margin-right: 74px;"><a href="#" onclick="nextTrack()" id="nexttrack" class="next round" >&#8250;</a></span>
         </div>
       </div>
     </div>
