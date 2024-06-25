@@ -11,6 +11,7 @@ let isPlaying = false;
 let repeatMode = 0;
 const repeatIcon = document.getElementById("repeatIcon");
 let now_playing = document.querySelector("#np")
+
 const songs = [
     {
         name: "Coldplay - Hymn For The Weekend",
@@ -97,10 +98,12 @@ function toggleRepeat() {
 }
 
 audio.addEventListener('ended', ()=> {
-  if (repeatMode === 1) { 
+  if (repeatIcon.style.color == "blue") { 
+    audio.loop =true
       audio.currentTime = 0; 
       audio.play(); 
   } else { 
+    audio.loop =false
       nextTrack(); 
   }
 });
@@ -115,6 +118,7 @@ function playAud(src) {
     timerId = setInterval(timer, 1000);
     isPlaying = true;
     btn.classList.add("active");
+     
     const currentSong = songs.find(song => song.src === src);
     if (currentSong) {
         document.querySelector(".image").src = currentSong.img;
@@ -131,7 +135,6 @@ function nextTrack() {
 function prevTrack() {
     trackIndex = (trackIndex - 1 + songs.length) % songs.length;
     playAud(songs[trackIndex].src);
-    now_playing.textContent = "PLAYING " + songs[trackIndex].name
 }
 
 volumecontroller.addEventListener("input", setVolume);
