@@ -119,16 +119,19 @@ function playAud(src) {
     if (currentSong) {
         document.querySelector(".image").src = currentSong.img;
     }
+    now_playing.textContent = "PLAYING " + currentSong.name
 }
 
 function nextTrack() {
     trackIndex = (trackIndex + 1) % songs.length;
     playAud(songs[trackIndex].src);
+    now_playing.textContent = "PLAYING " + songs[trackIndex].name
 }
 
 function prevTrack() {
     trackIndex = (trackIndex - 1 + songs.length) % songs.length;
     playAud(songs[trackIndex].src);
+    now_playing.textContent = "PLAYING " + songs[trackIndex].name
 }
 
 volumecontroller.addEventListener("input", setVolume);

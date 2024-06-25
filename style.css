@@ -38,6 +38,7 @@ background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+
 }
 .nowplaying{
   margin-top: 10px;
+  display: flex;
 }
 .imagediv{
   margin-top: 20px;
