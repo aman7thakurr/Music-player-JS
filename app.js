@@ -10,7 +10,7 @@ let timerId = null;
 let isPlaying = false;
 let repeatMode = 0;
 const repeatIcon = document.getElementById("repeatIcon");
-
+let now_playing = document.querySelector("#np")
 const songs = [
     {
         name: "Coldplay - Hymn For The Weekend",
