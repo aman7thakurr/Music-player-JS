@@ -127,10 +127,10 @@ function prevTrack() {
 }
 
 volumecontroller.addEventListener("input", setVolume);
-if(repeatIcon.style.color==="blue"){seek_slider.addEventListener("input", () => {
+seek_slider.addEventListener("input", () => {
     audio.currentTime = (seek_slider.value / 100) * audio.duration;
 });
-audio.addEventListener("ended", nextTrack);}
+audio.addEventListener("ended", nextTrack);
 
 // const aud = document.getElementById("aud");
 // var audio = new Audio("./assets/powfu-death-bed.mp3");
