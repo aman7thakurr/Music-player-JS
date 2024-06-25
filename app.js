@@ -89,6 +89,11 @@ function playPause() {
 function toggleRepeat() {
   repeatMode = repeatMode === 0 ? 1 : 0;
   repeatIcon.style.color = repeatMode === 1 ? "blue" : "black";
+  if (repeatIcon.style.color == "blue") { 
+    audio.loop =true}
+    else{
+      audio.loop =false 
+    }
 }
 
 audio.addEventListener('ended', ()=> {
