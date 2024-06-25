@@ -91,7 +91,7 @@ function toggleRepeat() {
   repeatIcon.style.color = repeatMode === 1 ? "blue" : "black";
 }
 
-audio.addEventListener('ended', function () {
+audio.addEventListener('ended', ()=> {
   if (repeatMode === 1) { 
       audio.currentTime = 0; 
       audio.play(); 
