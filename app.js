@@ -92,7 +92,7 @@ function toggleRepeat() {
 }
 
 audio.addEventListener('ended', ()=> {
-  if (repeatMode === 1) { 
+  if (repeatIcon.style.color==="blue") { 
       audio.currentTime = 0; 
       audio.play(); 
   } else { 
