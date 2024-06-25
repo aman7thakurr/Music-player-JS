@@ -389,7 +389,7 @@ ul {
 }
 li {
   padding: 5px 10px;
-  background-color:  #f5aa99;
+  /* background-color:  #f5aa99; */
   border: 1px solid #DDDDDD;
   cursor: pointer;
 }
